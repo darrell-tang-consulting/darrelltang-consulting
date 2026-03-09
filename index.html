@@ -6,6 +6,14 @@
     <title>Darrell Tang Consulting — DevOps & Infrastructure for SaaS Companies</title>
     <meta name="description" content="Production-ready infrastructure for SaaS companies. Kubernetes, Terraform, CI/CD pipelines, and multi-cloud architecture from an SRE with enterprise experience.">
     <meta name="keywords" content="DevOps consultant, SaaS infrastructure, Kubernetes, Terraform, CI/CD, cloud architecture, site reliability engineer">
+    <meta property="og:title" content="Darrell Tang Consulting — DevOps & Infrastructure for SaaS Companies">
+    <meta property="og:description" content="Production-ready infrastructure for SaaS companies. Kubernetes, Terraform, CI/CD pipelines, and multi-cloud architecture. Book a free discovery call.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://darrelltang.consulting">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Darrell Tang Consulting — DevOps & Infrastructure for SaaS">
+    <meta name="twitter:description" content="Production-ready infrastructure for SaaS companies. Kubernetes, Terraform, CI/CD, and multi-cloud architecture.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230ea5c9'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='14' fill='%2309090b'%3EDT%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -159,10 +167,10 @@
         .nav-cta {
             color: var(--accent) !important;
             border: 1px solid var(--accent-border);
-            padding: 6px 16px;
-            border-radius: 6px;
-            font-family: var(--font-mono);
-            font-size: 0.78rem !important;
+            padding: 5px 14px;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 0.84rem !important;
             letter-spacing: 0.01em;
             transition: all 0.2s ease !important;
         }
@@ -431,6 +439,34 @@
             line-height: 1.7;
         }
 
+        .case-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .case-list li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .case-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent-dim);
+        }
+
         /* Tech Stack */
         .tech-stack {
             padding: 40px 0 48px;
@@ -475,7 +511,7 @@
             width: 18px;
             height: 18px;
             flex-shrink: 0;
-            opacity: 0.6;
+            opacity: 0.85;
             transition: opacity 0.2s ease;
         }
 
@@ -562,6 +598,7 @@
             gap: 2rem;
             align-items: start;
             max-width: 680px;
+            margin: 0 auto;
         }
 
         .profile-placeholder {
@@ -619,6 +656,20 @@
             color: var(--text-secondary);
             letter-spacing: -0.01em;
             text-transform: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .about-logo-img {
+            height: 20px;
+            width: auto;
+            opacity: 0.55;
+            transition: opacity 0.2s ease;
+        }
+
+        .about-logo-img:hover {
+            opacity: 0.8;
         }
 
         .logo-divider {
@@ -675,6 +726,10 @@
             animation: none;
         }
 
+        .final-cta .cta-subtext {
+            margin: 2rem auto 0;
+        }
+
         /* Footer */
         footer {
             padding: 2.5rem 0;
@@ -708,6 +763,62 @@
             color: var(--text-secondary);
         }
 
+        /* Mid-page CTA */
+        .mid-cta {
+            padding: 64px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-elevated);
+        }
+
+        .mid-cta .cta-button {
+            opacity: 1;
+            animation: none;
+        }
+
+        .cta-subtext {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin: 2rem auto 0;
+            letter-spacing: 0.02em;
+        }
+
+        /* Mobile CTA */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 12px 20px;
+            background: rgba(9, 9, 11, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+        }
+
+        .mobile-cta .cta-button {
+            opacity: 1;
+            animation: none;
+            width: 100%;
+            justify-content: center;
+            padding: 14px 24px;
+        }
+
+        /* Case study result lines */
+        .case-result {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-top: 0.75rem;
+            letter-spacing: 0.02em;
+        }
+
         /* Responsive */
         @media (max-width: 900px) {
             .case-grid,
@@ -718,6 +829,7 @@
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .mobile-cta { display: block; }
             .container { padding: 0 20px; }
 
             .hero { padding: 140px 0 80px; }
@@ -742,6 +854,8 @@
 
             .final-cta { padding: 100px 0; }
             .final-cta h2 { font-size: 2rem; }
+
+            body { padding-bottom: 70px; }
 
             .footer-inner {
                 flex-direction: column;
@@ -811,19 +925,19 @@
             <div class="container">
                 <div class="tech-inner">
                     <div class="tech-badges">
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/kubernetes/ededed" alt="Kubernetes"> Kubernetes</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/terraform/ededed" alt="Terraform"> Terraform</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/argo/ededed" alt="ArgoCD"> ArgoCD</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/docker/ededed" alt="Docker"> Docker</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/helm/ededed" alt="Helm"> Helm</span>
-                        <span class="tech-badge">Azure</span>
-                        <span class="tech-badge">AWS</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/googlecloud/ededed" alt="GCP"> GCP</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/githubactions/ededed" alt="GitHub Actions"> GitHub Actions</span>
-                        <span class="tech-badge">Azure DevOps</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/linkerd/ededed" alt="LinkerD"> LinkerD</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/go/ededed" alt="Go"> Go</span>
-                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/python/ededed" alt="Python"> Python</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes"> Kubernetes</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform"> Terraform</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original.svg" alt="ArgoCD"> ArgoCD</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"> Docker</span>
+                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/helm/277A9F" alt="Helm"> Helm</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure"> Azure</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"> AWS</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="GCP"> GCP</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions"> GitHub Actions</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg" alt="Azure DevOps"> Azure DevOps</span>
+                        <span class="tech-badge"><img src="https://cdn.simpleicons.org/linkerd/2BEDA7" alt="LinkerD"> LinkerD</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Go"> Go</span>
+                        <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"> Python</span>
                     </div>
                 </div>
             </div>
@@ -838,21 +952,43 @@
                     <div class="case-card">
                         <span class="case-tag">GovTech</span>
                         <h3>Multi-tenant platform for government contractors</h3>
-                        <p>AKS + ArgoCD + LinkerD with mTLS tenant isolation. 4-layer Terraform with blast radius isolation. New tenants: 3 files, zero code changes.</p>
+                        <ul class="case-list">
+                            <li>AKS + ArgoCD + LinkerD with mTLS tenant isolation</li>
+                            <li>4-layer Terraform with blast radius isolation</li>
+                            <li>New tenants: 3 files, zero code changes</li>
+                        </ul>
                     </div>
 
                     <div class="case-card">
                         <span class="case-tag">Healthcare</span>
                         <h3>77 repos with inconsistent pipelines</h3>
-                        <p>Centralized pipeline templates with automated validation across the org. Picked up previous engineer's in-flight work and drove it to production.</p>
+                        <ul class="case-list">
+                            <li>Centralized pipeline templates with automated validation</li>
+                            <li>Picked up previous engineer's in-flight work</li>
+                            <li>Drove it to production across the org</li>
+                        </ul>
                     </div>
 
                     <div class="case-card">
                         <span class="case-tag">Legal Tech</span>
                         <h3>Inherited Terraform that didn't match production</h3>
-                        <p>Refactored into modular IaC. Stood up multi-cloud DR and GitHub Actions CI/CD. Security team used the new DR capability to update SOC 2 docs.</p>
+                        <ul class="case-list">
+                            <li>Refactored into modular IaC</li>
+                            <li>Stood up multi-cloud DR + GitHub Actions CI/CD</li>
+                            <li>Security team used DR to update SOC 2 docs</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="mid-cta reveal">
+            <div class="container">
+                <a href="https://calendar.app.google/SgWK3rc47cbzBzHy7" target="_blank" rel="noopener" class="cta-button">
+                    Book a Discovery Call
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <p class="cta-subtext">No commitment — 30-minute call to discuss your infrastructure</p>
             </div>
         </section>
 
@@ -865,19 +1001,31 @@
                     <div class="step">
                         <p class="step-number">Step 01</p>
                         <h3>Assess</h3>
-                        <p>I audit your current infrastructure, identify gaps, and scope the project before you commit.</p>
+                        <ul class="case-list">
+                            <li>Audit current infrastructure</li>
+                            <li>Identify gaps and quick wins</li>
+                            <li>Scope the project before you commit</li>
+                        </ul>
                     </div>
 
                     <div class="step">
                         <p class="step-number">Step 02</p>
                         <h3>Build</h3>
-                        <p>I deliver production-ready infrastructure with IaC, pipelines, and the operational docs your team needs to run it.</p>
+                        <ul class="case-list">
+                            <li>Production-ready IaC and pipelines</li>
+                            <li>Operational docs your team can run</li>
+                            <li>Fixed-price, defined deliverables</li>
+                        </ul>
                     </div>
 
                     <div class="step">
                         <p class="step-number">Step 03</p>
                         <h3>Support</h3>
-                        <p>Optional retainer for ongoing improvements, incident support, and infrastructure evolution.</p>
+                        <ul class="case-list">
+                            <li>Optional ongoing retainer</li>
+                            <li>Incident support and troubleshooting</li>
+                            <li>Infrastructure evolution over time</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -892,9 +1040,9 @@
                         <p>SRE and DevOps consultant focused on SaaS infrastructure. Previously at Paramount+ and LexisNexis, where I led zero-downtime migrations and managed production Kubernetes clusters at scale. Now I help SaaS companies build the same caliber of infrastructure without the enterprise price tag.</p>
                         <div class="about-logos">
                             <span>Previously</span>
-                            <span class="logo-text">Paramount+</span>
+                            <span class="logo-text"><img src="https://cdn.simpleicons.org/paramountplus/8b8b9e" alt="Paramount+" class="about-logo-img"> Paramount+</span>
                             <div class="logo-divider"></div>
-                            <span class="logo-text">LexisNexis</span>
+                            <span class="logo-text"><img src="https://www.vectorlogo.zone/logos/lexisnexis/lexisnexis-icon.svg" alt="LexisNexis" class="about-logo-img"> LexisNexis</span>
                         </div>
                     </div>
                 </div>
@@ -911,18 +1059,25 @@
                         Book a Discovery Call
                         <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
+                    <p class="cta-subtext">No commitment — 30-minute call to discuss your infrastructure</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <div class="mobile-cta">
+        <a href="https://calendar.app.google/SgWK3rc47cbzBzHy7" target="_blank" rel="noopener" class="cta-button">
+            Book a Discovery Call
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
 
     <footer>
         <div class="container">
             <div class="footer-inner">
                 <p>&copy; 2026 Darrell Tang Consulting</p>
                 <div class="footer-links">
-                    <a href="/privacy-policy.html">Privacy Policy</a>
-                    <a href="/terms-of-service.html">Terms of Service</a>
+                    <a href="https://linkedin.com/in/darrelltang" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
         </div>
