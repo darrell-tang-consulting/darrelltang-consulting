@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://darrelltang.consulting/sitemap.xml
